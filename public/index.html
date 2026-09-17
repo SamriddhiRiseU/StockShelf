@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stock Shelving System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+
+<aside class="sidebar">
+
+    <h2>StockShelf</h2>
+
+    <nav>
+
+        <a href="#" class="active">Dashboard</a>
+
+        <a href="/product.html">Products</a>
+
+        <a href="/stock-in.html">Stock In</a>
+
+        <a href="/stock-out.html">Stock Out</a>
+
+        <a href="/rack-shelves.html">Racks & Shelves</a>
+
+        <a href="/stock-history.html">Stock History</a>
+
+    </nav>
+
+</aside>
+
+
+
+
+
+<main class="main-content">
+
+
+  
+
+    <header>
+
+        <h1>Dashboard</h1>
+
+        <p>Welcome to your Stock Shelving System</p>
+
+    </header>
+
+
+
+  
+
+    <section class="cards">
+
+
+        <div class="card">
+
+            <h3>Total Products</h3>
+
+            <p id="totalProducts">0</p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Total Stock</h3>
+
+            <p id="totalStock">0</p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Low Stock</h3>
+
+            <p id="lowStock">0</p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Racks</h3>
+
+            <p id="totalRacks">0</p>
+
+        </div>
+    <div class="card">
+    <h3>Inventory Value</h3>
+    <p id="inventoryValue">₹0</p>
+</div>
+
+
+    </section>
+
+
+
+  
+
+    <section class="add-product">
+
+        <h2>Add New Product</h2>
+
+
+        <form id="productForm">
+
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Product Name"
+                required
+            >
+
+
+            <input
+                type="text"
+                id="sku"
+                placeholder="SKU"
+                required
+            >
+
+
+            <input
+                type="text"
+                id="category"
+                placeholder="Category"
+            >
+
+
+            <input
+                type="number"
+                id="quantity"
+                placeholder="Quantity"
+                min="0"
+            >
+
+
+            <input
+                type="number"
+                id="minimum_stock"
+                placeholder="Minimum Stock"
+                min="0"
+            >
+
+
+            <input
+                type="text"
+                id="rack"
+                placeholder="Rack"
+            >
+
+
+            <input
+                type="text"
+                id="shelf"
+                placeholder="Shelf"
+            >
+
+
+            <input
+                type="number"
+                id="price"
+                placeholder="Price"
+                min="0"
+                step="0.01"
+            >
+
+
+            <button type="submit">
+                Add Product
+            </button>
+
+
+        </form>
+
+
+        <p id="message"></p>
+
+
+    </section>
+
+
+
+   
+
+    <section class="recent">
+
+        <h2>Recent Products</h2>
+
+
+        <table>
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>SKU</th>
+            <th>Category</th>
+            <th>Quantity</th>
+            <th>Min Stock</th>
+            <th>Rack</th>
+            <th>Shelf</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody id="productTableBody">
+    </tbody>
+</table>
+
+    </section>
+
+
+</main>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
+
+
